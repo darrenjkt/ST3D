@@ -139,6 +139,11 @@ class WaymoDataset(DatasetTemplate):
             else:
                 gt_boxes_lidar = annos['gt_boxes_lidar']
 
+            if self.dataset_cfg.get('TRAIN_WITH_SPEED', False):
+                assert gt_boxes_lidar.shape[-1] == 9
+            else:
+                gt_boxes_lidar = gt_boxes_lidar[:, 0:7]
+                
             input_dict.update({
                 'gt_names': annos['name'],
                 'gt_boxes': gt_boxes_lidar,

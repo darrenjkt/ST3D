@@ -1,5 +1,5 @@
 DATASET: 'KittiDataset'
-DATA_PATH: '../data/kitti'
+DATA_PATH: '../data/kitti/3d_object_detection'
 
 POINT_CLOUD_RANGE: [-75.2, -75.2, -2, 75.2, 75.2, 4]
 
@@ -9,8 +9,8 @@ DATA_SPLIT: {
 }
 
 INFO_PATH: {
-    'train': [kitti_infos_train.pkl],
-    'test': [kitti_infos_val.pkl],
+    'train': [infos/kitti_infos_train.pkl],
+    'test': [infos/kitti_infos_val.pkl],
 }
 
 DATA_AUGMENTOR:

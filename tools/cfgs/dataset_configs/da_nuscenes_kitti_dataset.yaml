@@ -11,8 +11,8 @@ DATA_SPLIT: {
 }
 
 INFO_PATH: {
-    'train': [nuscenes_infos_10sweeps_train.pkl],
-    'test': [nuscenes_infos_10sweeps_val.pkl],
+    'train': [infos_openpcdetv0.3.0/nuscenes_infos_10sweeps_train.pkl],
+    'test': [infos_openpcdetv0.3.0/nuscenes_infos_10sweeps_val.pkl],
 }
 
 POINT_CLOUD_RANGE: [-75.2, -75.2, -2, 75.2, 75.2, 4]

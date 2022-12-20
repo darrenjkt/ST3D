@@ -30,6 +30,7 @@ class KittiDataset(DatasetTemplate):
 
         self.kitti_infos = []
         self.include_kitti_data(self.mode)
+        self.kitti_infos = self.kitti_infos[:50]
 
     def include_kitti_data(self, mode):
         if self.logger is not None:
